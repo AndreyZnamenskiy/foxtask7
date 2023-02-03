@@ -2,7 +2,7 @@
 
 ## Package info
 Web version of Monaco Race Report.  Based on Flas framework 
-
+DEMO available here https://azn-foxtask7.onrender.com/
 
 ##  TASK TEXT:
 ### Task 7 - Web report of Monaco 2018 Racing
