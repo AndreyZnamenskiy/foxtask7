@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <table class="table table-hover table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Position {{ flag.icon }}</th>
+              <th scope="col">ID</th>
+              <th scope="col">Full Name</th>
+              <th scope="col">Team</th>
+              <th scope="col">Lap Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for driver in good_list %}
+            <tr>
+                <th scope="row">{{ driver.position }}</th>
+                <td class="font-monospace">{{ driver.id }}</td>
+                <td>{{ driver.full_name }}</td>
+                <td>{{ driver.team }}</td>
+                <td>{{ my_func(driver.lap_time) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <table class="table table-hover table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Position</th>
+              <th scope="col">ID</th>
+              <th scope="col">Full Name {{ flag.icon }}</th>
+              <th scope="col">Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for driver in erro_list %}
+            <tr>
+                <th scope="row">{{ driver.position }}</th>
+                <td class="font-monospace">{{ driver.id }}</td>
+                <td>{{ driver.full_name }}</td>
+                <td>{{ driver.team }}</td>
+                <td>{{ driver.lap_time.total_seconds() }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+{% endblock %}

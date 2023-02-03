@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fox-azn-t7-monaco"
+version = "0.1.0"
+authors = [
+  { name="Andrey Zn", email="mymail@example.com" },
+]
+description = "Task 7 Report of Monaco WEB"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.hatch.build]
+exclude = [".gitignore", ".pytest_cache/", ]
+
+[tool.hatch.build.sources]
+"data" = "data"
+"src" = ""
+
+
+[project.urls]
+"Homepage" = "https://git.foxminded.ua/foxstudent103533/task-6-report-of-monaco-2018-racing"
+"Bug Tracker" = "https://git.foxminded.ua/foxstudent103533/task-6-report-of-monaco-2018-racing/-/issues"
